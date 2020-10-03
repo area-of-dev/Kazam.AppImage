@@ -1,0 +1,1 @@
+# Kazam.AppImage
