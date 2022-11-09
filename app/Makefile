@@ -18,12 +18,11 @@ all: clean init
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir/vendor
 
 	$(PWD)/bin/Apprepo.AppImage --destination=$(PWD)/build appdir boilerplate kazam \
-										python3.8 python3.8-dev python3.8-psutil python3-xlib \
-										python3.8-setuptools python3-xdg python3-pip \
-										python3-distutils python3-distutils-extra python3-gi python3-dbus python3-cairo \
-										openssl libffi7 intltool libgudev-1.0-0 libffi libgudev gir1.2-gudev-1.0 \
-										libtinfo6 libncurses6 libtinfo5 libgtk-3-0 libwayland-cursor0 libselinux1
-
+			python3.8 python3.8-dev python3.8-distutils  \
+			python3-psutil python3-xlib python3-setuptools python3-xdg python3-pip \
+			python3-distutils-extra python3-gi python3-dbus python3-cairo \
+			openssl libffi7 intltool libgudev-1.0-0 libffi libgudev gir1.2-gudev-1.0 \
+			libtinfo6 libncurses6 libtinfo5 libgtk-3-0 libwayland-cursor0 libselinux1
 
 	echo 'PYTHONPATH=$${PYTHONPATH}:$${APPDIR}/vendor' 								>> $(PWD)/build/Boilerplate.AppDir/AppRun
 	echo 'export PYTHONPATH=$${PYTHONPATH}' 										>> $(PWD)/build/Boilerplate.AppDir/AppRun
